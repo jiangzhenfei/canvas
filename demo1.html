@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drawing" width="500px" height="500px"></canvas>
+</body>
+<script>
+    var drawing = document.getElementById('drawing')
+    if(drawing.getContext){
+        context = drawing.getContext('2d')
+
+        context.fillStyle = 'blue';
+        context.fillRect(10,10,100,100)
+
+        context.fillStyle = 'rgba(0,0,255,0.5)';
+        context.fillRect(60,60,100,100)
+    }
+</script>
+</html>

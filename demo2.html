@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drawing" width="500px" height="500px"></canvas>
+</body>
+<script>
+    console.log(Math.PI)
+    var drawing = document.getElementById('drawing')
+    if(drawing.getContext){
+        context = drawing.getContext('2d')
+
+        context.beginPath();
+        
+        context.fillStyle = 'blue';
+        context.moveTo(100,100)
+        context.arc(100,100,99,0,0.5*Math.PI,false)
+        context.lineTo(100,100)
+        
+        context.fill()
+        context.stroke()
+        context.closePath();
+
+        context.beginPath();
+        context.fillStyle = 'red';
+        context.moveTo(100,100)
+        context.arc(100,100,110,0.5*Math.PI,1*Math.PI,false)
+
+        context.fill()
+        context.stroke()
+        
+    }
+</script>
+</html>
